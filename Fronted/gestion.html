@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/webfonts/">
+    <script src="https://kit.fontawesome.com/a51e228d31.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href="/Fronted/src/gestion.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/Fronted/index.html"><i class="fa fa-book" aria-hidden="true"></i>Biblioteca</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i>opciones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/owners.html">About Us</a>
+            </li>
+          </ul>
+          <div class="action-menu">
+            <!-- <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="cerrar">Cerrar Sesion</button> -->
+            <a class="btn btn-outline-danger my-2 my-sm-0" href="/Fronted/index.html"><i class="fa fa-power-off" aria-hidden="true"></i>
+              Cerrar Sesion</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <div class="container">
+    <div class="row btones">
+        <div class="btn-group-vertical grupoBtn">
+            <button type="button" class="btn btn-success boton" data-toggle="modal" data-target="#Modal2" >Crear Oferta</button>
+            <button type="button" class="btn btn-success boton" data-toggle="modal" data-target="#Modal5">Verificar ticket de venta</button>
+            <button type="button" class="btn btn-success boton" data-toggle="modal" data-target="#Modal3">Registrar Entrega</button>
+            <button type="button" class="btn btn-success boton" data-toggle="modal" data-target="#Modal4">Enriquecer Catalogo</button>
+            <button type="button" class="btn btn-success boton" data-toggle="modal" data-target="#Modal6">Editar Libro</button>
+            
+            <button type="button" class="btn btn-warning boton" data-toggle="modal" data-target="#Modal1">Crear nueva cuenta de gestor</button>
+          </div>
+  </div>
+  </div>
+<footer class="fixed-bottom">
+  <div class="container">
+      <div class="row footer">
+        <div class="col-6">
+          <h2>Bibliotecas y Librerias Nacionales:</h2>
+          <h1><Strong>Gracias por visitarnos</Strong></h1>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-university fa-5x icon" aria-hidden="true"></i>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-internet-explorer fa-5x icon" aria-hidden="true"></i>
+        </div>
+      </div>
+  </div>
+</footer>
+<!-- Modal 1-->
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Agregar Gestor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form_AgregarGestor">
+          <input type="hidden" id="indice">
+          <div class="form-row">
+          
+          <div class="col">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+          </div><div class="col">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary " id="btn-guardar" >Agregar</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 2-->
+<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Agregar Oferta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form_AgregarOferta">
+          <input type="hidden" id="indice">
+          <div class="form-row">
+          <div class="col">
+            <label for="fechaI">Fecha de inicio</label>
+            <input type="date" class="form-control" id="fechaI">
+          </div>
+          <div class="col">
+            <label for="fechaF">Fecha de cierre</label>
+            <input type="date" class="form-control" id="fechaF">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <label for="descuentoCup">Descuento de CUP:</label>
+            <input type="number" class="form-control" id="descuentoCup">
+          </div>
+          <div class="col">
+            <label for="descuentoMlc">Descuento de MLC:</label>
+            <input type="number" class="form-control" id="descuentoCup">
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="motivo">Motivo</label>
+          <input type="text" class="form-control" id="motivo">
+        </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary " id="btn-guardar" data-dismiss="modal">Agregar</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 3-->
+<div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Registrar Entrega</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form_AgregarGestor">
+          <input type="hidden" id="indice">
+          <div class="form-row">
+          <div class="col">
+            <label for="nombreCliente">Nombre Cliente</label>
+            <input type="text" class="form-control" id="nombreCliente">
+          </div><div class="col">
+            <label for="nombreLibro">Nombre Libro</label>
+            <input type="text" class="form-control" id="nombreLibro">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" id="apellido">
+          </div><div class="col">
+            <label for="autor">Autor</label>
+            <input type="text" class="form-control" id="autor">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <label for="ci">CI</label>
+            <input type="text" class="form-control" id="ci">
+          </div><div class="col">
+            <label for="fechaP">Fecha de Prestamo</label>
+            <input type="date" class="form-control" id="fechaP">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <label for="municipio">Municipio</label>
+            <select class="form-control" id="municipio">
+              <option></option>
+              <option>Marianao</option>
+              <option>Cerro</option>
+              <option>Habana Vieja</option>
+              <option>Centro Habana</option>
+              <option>Luyano</option>
+              <option>Guanabacoa</option>
+              <option>Guanabo</option>
+              <option>Habana del Este</option>
+              <option>Playa</option>
+              <option>Lisa</option>
+              <option>Miramar</option>
+              <option>Vedado</option>
+              <option>Regla</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="folio">Folio</label>
+            <input type="text" class="form-control" id="folio">
+          </div>
+        </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary " id="btn-guardar" data-dismiss="modal">Registrar</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 4-->
+<div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Enriquecer Catalogo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="enriquecercatalogo">
+          <div class="form-row">
+          <div class="col">
+            <label for="tituloEC">Titulo</label>
+            <input type="text" class="form-control" id="tituloEC" placeholder="Titulo">
+          </div>
+          <div class="col">
+            <label for="autorEC">Autor</label>
+            <input type="text" class="form-control" id="autorEC" placeholder="Autor">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <label for="generoEC">Genero</label>
+            <select class="form-control" id="generoEC">
+              <option value="">Selecciona genero</option>
+              <option>Misterio</option>
+              <option>Aventura</option>
+              <option>Drama</option>
+              <option>Ciencia Ficcion</option>
+              <option>Terror</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="municipioEC">Municipio</label>
+            <select class="form-control" id="municipioEC">
+              <option value="">Selecciona municipio</option>
+              <option>Marianao</option>
+              <option>Cerro</option>
+              <option>Habana Vieja</option>
+              <option>Centro Habana</option>
+              <option>Luyano</option>
+              <option>Guanabacoa</option>
+              <option>Guanabo</option>
+              <option>Habana del Este</option>
+              <option>Playa</option>
+              <option>Lisa</option>
+              <option>Miramar</option>
+              <option>Vedado</option>
+              <option>Regla</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+        <div class="checkbox-noComercial">
+          <input type="checkbox" id="nComercialEC">
+          <label for="nComercialEC" class="labelPago">No comercial</label>
+        </div>
+        <div class="checkbox-noComercial">
+          <input type="checkbox" id="digitalEC"data-toggle="collapse" data-target="#collapseD"aria-expanded="false" aria-controls="collapseD">
+          <label for="digitalEC" class="labelPago">Digital</label>
+          <div class="collapse" id="collapseD">
+            <select class="selectorDigital" id="formatoEC">
+              <option>pdf</option>
+              <option>epub</option>
+            </select>
+          </div>
+        </div>
+          <input type="checkbox" id="ComercialEC"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          <label for="ComercialEC" class="labelPago" >Comercial</label>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  
+                  <label for="montocup">Precio en CUP:</label>
+                  <input type="text" class="inpAgo" id="montocup">
+                </div>
+                
+              </div>
+              
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  
+                  <label for="montomlc" >Precio en MLC:</label>
+                   <input type="text" class="inpAgo" id="montomlc">
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="custom-file portada">
+            <label class="custom-file-label" id="labelportada" for="portada">Buscar portada</label>
+            <input type="file" class="custom-file-input" id="portada"  accept="image/png, image/jpeg">
+          </div>
+        </div>
+        </div>
+        
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary " id="btn-guardarEC" >Agregar</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 5-->
+<div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Buscar ticket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form_AgregarGestor">
+          <input type="hidden" id="indice">
+          <div class="form-row">
+          
+          <div class="col">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" placeholder="ID">
+          </div><div class="col">
+            <label for="telefono">Telefono</label>
+            <input type="text" class="form-control" id="telefono" placeholder="+53">
+          </div>
+        </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary " id="btn-guardar" data-dismiss="modal">Buscar</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 6-->
+<div class="modal fade" id="Modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Edicion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="container">
+          <div class="row btnsEdit">
+          <div class="btn-group " role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-primary" id="Comerciales">Comerciales</button>
+            <button type="button" class="btn btn-outline-primary" id="NoComerciales">No Comerciales</button>
+            <button type="button" class="btn btn-outline-primary" id="Digitales">Digitales</button>
+          </div>
+        </div>
+        <div class="row tabla">
+          <table class="table" id="tabla">
+            <thead class="table-dark" id="tablaHead">
+            </thead>
+            <tbody id="tablaBody">
+              
+            </tbody>
+          </table>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="module" src="/src/main.jsx"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="src/gestion.js"></script> 
+    
+</body>
+</html>

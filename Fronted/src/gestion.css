@@ -1,0 +1,57 @@
+.registro{
+    padding-top: 7px;
+}
+body{
+    background-image:url('/Fronted/assets/Fondo.jpg') ;
+    background-size: cover;
+}
+h1{
+    font-family: 'Comic Sans MS',Arial,sans-serif;
+}
+
+.tit-BD{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+.footer{
+    background-color: rgb(146, 102, 44);
+    color:white;
+    margin-top: 50px;
+}
+.icon{
+    position: relative;
+    top: 10px;
+}
+.grupoBtn{
+    margin: 0 auto;
+}
+.btones{
+    margin-top: 50px;
+}
+.boton{
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.checkbox-noComercial{
+    margin-right: 25px;
+}
+.portada{
+    margin-top: 15px;
+}
+.inpAgo{
+    width: 42px;
+    height: 25px;
+    
+}
+.btnsEdit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabla{
+    margin-top: 10px;
+}

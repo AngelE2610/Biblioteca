@@ -1,0 +1,125 @@
+.registro{
+    padding-top: 7px;
+}
+body{
+    background-image:url('/Fronted/assets/Fondo.jpg') ;
+    background-size: cover;
+}
+h1{
+    font-family: 'Comic Sans MS',Arial,sans-serif;
+}
+.noComercial{
+    width: 40%;
+    position: absolute;
+    margin-left: 69px;
+    margin-top: 15px;
+}
+.funcion{
+    text-align: center;
+}
+.botonBuscarNoComercial{
+    position:relative;
+    left: 124px;
+    bottom: -16px;
+    padding: 7px 31px;
+}
+.botonCancelarNoComercial{
+    position:relative;
+    left: 130px;
+    bottom: -16px;
+    padding: 7px 31px;
+}
+.comercial{
+    width: 40%;
+    position: relative;
+    left: 309px;
+    top:15px
+}
+.botonBuscarComercial{
+    position:relative;
+    top: 5px;
+    left: 70px;
+    padding: 7px 31px;
+}
+.botonCancelarComercial{
+    position:relative;
+    left: 70px;
+    padding: 7px 24px;
+}
+.labelPago{
+    font-size: large;
+    position: relative;
+    bottom: -5px;
+}
+.inpAgo{
+    width: 50px;
+    height: 25px;
+    margin-top: 8px;
+    margin-left: 18px;
+}
+.tit-BD{
+    text-align: center;
+    margin-top: 30px;
+}
+.digital{
+    width: 40%;
+    position: relative;
+    left: 323px;
+    top:15px;
+    margin-bottom:40px;
+}
+.botonBuscarDigital,.botonCancelarDigital{
+    position:relative;
+    left: 85px;
+    top: 6px;
+}
+.selectorDigital{
+    position: relative;
+    left: 26px;
+    top: 5px;
+}
+.footer{
+    background-color: rgb(146, 102, 44);
+    color:white;
+    margin-top: 50px;
+}
+.icon{
+    position: relative;
+    top: 10px;
+}
+.btn1,.btn2,.btn3,.btn4{
+    border: none;
+    background-color: rgb(146, 102, 44);
+    margin: 20px;
+}
+.btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover{
+    background-color: rgb(141, 142, 58);
+}
+.btn2{
+    padding-right: 32px ;
+    padding-left: 32px;
+}
+.btn3{
+    padding-right: 41px ;
+    padding-left: 41px;
+}
+.btn4{
+    padding-right: 58px ;
+    padding-left: 58px;
+}
+.columna{
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.grupoBtn{
+    margin: 0 auto;
+}
+.modaltexto{
+    text-decoration-line: underline;
+}
+.alerta{
+    display: none;
+    margin-left: 50px;
+    margin-top: 10px;
+}

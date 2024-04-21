@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/webfonts/">
+    <script src="https://kit.fontawesome.com/a51e228d31.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href="/Fronted/src/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/index.html"><i class="fa fa-book" aria-hidden="true"></i>Biblioteca</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog" aria-hidden="true"></i>Opciones
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Busqueda Generica </a>
+                <a class="dropdown-item" href="#">Realizar Comentario</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Realizar Donacion</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/owners.html">About Us</a>
+            </li>
+          </ul>
+          <div class="action-menu">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="button" data-toggle="modal" data-target="#Modal"><i class="fa fa-user-circle" aria-hidden="true"></i>
+              Sesión de Trabajo</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <div class="container">
+    <div class="row">
+    <div class="action-menu col-4 columna">
+      <button class="btn  btn-lg btn1" type="button" data-toggle="modal" data-target="#Modal2">Reservar Libro No Comercial</button>
+      <button class="btn  btn-lg btn2" type="button" data-toggle="modal" data-target="#Modal3">Comprar Libro Comercial</button>
+      <button class="btn  btn-lg btn3" type="button" data-toggle="modal" data-target="#Modal4">Descargar Libro Digital</button>
+      
+    </div>
+  </div>
+  </div>
+<footer class="fixed-bottom">
+  <div class="container">
+      <div class="row footer">
+        <div class="col-6">
+          <h2>Bibliotecas y Librerias Nacionales:</h2>
+          <h1><Strong>Gracias por visitarnos</Strong></h1>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-university fa-5x icon" aria-hidden="true"></i>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-internet-explorer fa-5x icon" aria-hidden="true"></i>
+        </div>
+      </div>
+  </div>
+</footer>
+    <!-- Modal 1-->
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Iniciar Sesion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form">
+              <input type="hidden" id="indice">
+              <div class="form-row">
+              
+              <div class="col">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              </div><div class="col">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+            </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary " id="btn-guardar" data-dismiss="modal">Entrar</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2-->
+    <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Buscar Libro no comercial</h5>
+            <div class="alert alert-warning alert-dismissible alerta" role="alert">
+              <strong>Ten cuidado</strong> te faltan datos por llenar.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="formBusqNoComercial" class="needs-validation">
+              <div class="form-row">
+              <div class="col">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" id="tituloNC" placeholder="Titulo" required>
+              </div>
+              <div class="col">
+                <label for="autor">Autor</label>
+                <input type="text" class="form-control" id="autorNC" placeholder="Autor">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="genero">Genero</label>
+                <select class="form-control" id="generoNC">
+                  <option value="">Seleccione genero</option>
+                  <option>Misterio</option>
+                  <option>Aventura</option>
+                  <option>Drama</option>
+                  <option>Ciencia Ficcion</option>
+                  <option>Terror</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="municipio">Municipio</label>
+                <select class="form-control" id="municipioNC">
+                  <option value="">Seleccione municipio</option>
+                  <option>Marianao</option>
+                  <option>Cerro</option>
+                  <option>Habana Vieja</option>
+                  <option>Centro Habana</option>
+                  <option>Luyano</option>
+                  <option>Guanabacoa</option>
+                  <option>Guanabo</option>
+                  <option>Habana del Este</option>
+                  <option>Playa</option>
+                  <option>Lisa</option>
+                  <option>Miramar</option>
+                  <option>Vedado</option>
+                  <option>Regla</option>
+                </select>
+              </div>
+            </div>
+            
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary " id="btn-guardarNC" >Buscar</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3-->
+    <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1600">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Buscar Libro Comercial</h5>
+            <div class="alert alert-warning alert-dismissible alerta" role="alert">
+              <strong>Ten cuidado</strong> te faltan datos por llenar.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form" name="comercial">
+              <div class="form-row">
+              <div class="col">
+                <label for="tituloC">Titulo</label>
+                <input type="text" class="form-control" id="tituloC" placeholder="Titulo" required>
+              </div>
+              <div class="col">
+                <label for="autor">Autor</label>
+                <input type="text" class="form-control" id="autorC" placeholder="Autor">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="genero">Genero</label>
+                <select class="form-control" id="generoC">
+                  <option value="">selecciona genero</option>
+                  <option>Misterio</option>
+                  <option>Aventura</option>
+                  <option>Drama</option>
+                  <option>Ciencia Ficcion</option>
+                  <option>Terror</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="municipio">Municipio</label>
+                <select class="form-control" id="municipioC">
+                  <option value="">selecciona municipio</option>
+                  <option>Marianao</option>
+                  <option>Cerro</option>
+                  <option>Habana Vieja</option>
+                  <option>Centro Habana</option>
+                  <option>Luyano</option>
+                  <option>Guanabacoa</option>
+                  <option>Guanabo</option>
+                  <option>Habana del Este</option>
+                  <option>Playa</option>
+                  <option>Lisa</option>
+                  <option>Miramar</option>
+                  <option>Vedado</option>
+                  <option>Regla</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="checkbox" id="cup"  aria-label="Checkbox for following text input">
+                  </div>
+                  <label for="cup" class="labelPago">CUP con monto maximo</label>
+                </div>
+                <input type="text" class=" inpAgo" id="montocup">
+              </div>
+              
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                  <input type="checkbox" id="mlc" aria-label="Checkbox button for following text input">
+                  </div>
+                  <label for="mlc" class="labelPago">MLC con monto maximo</label>
+                </div>
+                <input type="text" class="inpAgo" id="montomlc">
+              </div>
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary " id="btn-guardarLC" data-dismiss="modal">Buscar</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 4-->
+    <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Buscar Libro Digital</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form" >
+              <div class="form-row">
+              <div class="col">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" id="tituloD" placeholder="Titulo">
+              </div>
+              <div class="col">
+                <label for="autor">Autor</label>
+                <input type="text" class="form-control" id="autorD" placeholder="Autor">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <label for="genero">Genero</label>
+                <select class="form-control" id="generoD">
+                  <option value="">Selecciona genero</option>
+                  <option>Misterio</option>
+                  <option>Aventura</option>
+                  <option>Drama</option>
+                  <option>Ciencia Ficcion</option>
+                  <option>Terror</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="municipio">Municipio</label>
+                <select class="form-control" id="municipioD">
+                  <option value="">Seleccione municipio</option>
+                  <option>Marianao</option>
+                  <option>Cerro</option>
+                  <option>Habana Vieja</option>
+                  <option>Centro Habana</option>
+                  <option>Luyano</option>
+                  <option>Guanabacoa</option>
+                  <option>Guanabo</option>
+                  <option>Habana del Este</option>
+                  <option>Playa</option>
+                  <option>Lisa</option>
+                  <option>Miramar</option>
+                  <option>Vedado</option>
+                  <option>Regla</option>
+                </select>
+              </div>
+            </div>
+            <label for="formato"><strong>Formato:</strong></label>
+            <select class="selectorDigital" id="formato">
+              <option>pdf</option>
+              <option>epub</option>
+            </select>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary " id="btn-buscarlDigital" data-dismiss="modal">Buscar</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal para busqueda de libroNo Comercial-->
+    <div class="modal fade" id="ModalNComercial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 1800">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Resultado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row" id="bodyModalNC">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary " id="btn-guardar" data-dismiss="modal">Adquirir</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/Fronted/src/index.js"></script>
+    
+</body>
+</html>
